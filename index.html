@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Realtime Translation for video call</title>
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <h1>Realtime Translation video translation</h1>
+  </header>
+
+  <main>
+    <div id="videos">
+      <video id="remoteVideo" autoplay playsinline></video>
+      <video id="localVideo" autoplay muted playsinline></video>
+    </div>
+
+    <section id="translation">
+      <div id="text-output">
+        <p id="localText">Your Text</p>
+        <p id="remoteText">Translated Text</p>
+      </div>
+
+      <div class="controls">
+        <label>
+          <span>Input Language:</span>
+          <input type="text" value="hi" id="input_language" />
+        </label>
+        <label>
+          <span>Output Language:</span>
+          <input type="text" value="en" id="output_language" />
+        </label>
+        <label>
+          <span>Voice Number:</span>
+          <input type="text" value="-1" id="voice_number" />
+        </label>
+
+        <div class="button-group">
+          <button id="start-record-btn" title="Start Recording">Start Recognition</button>
+          <button id="pause-record-btn" title="Pause Recording">Pause Recognition</button>
+        </div>
+        <p id="recording-instructions">Press the <strong>Start Recognition</strong> button and allow access.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "name": "realtime-video-translation",
+  "version": "1.0.0",
+  "description": "capstone.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "webrtc",
+    "translation",
+    "video",
+    "realtime"
+  ],
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2",
+    "nodemon": "^3.0.1",
+    "@google-cloud/translate": "^1.1.0",
+    "google-translate-api": "^2.3.0",
+    "node-static": "^0.7.10"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "devDependencies": {}
+}
